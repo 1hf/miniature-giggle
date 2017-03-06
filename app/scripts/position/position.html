@@ -1,0 +1,15 @@
+<ion-view view-title="Current position">
+	<ion-content>
+		 <div class="content-inner">
+			<ion-list class="list">
+				<ion-item ng-repeat="param in vm.params">
+					{{param.key}}
+					<span class="item-note">
+						{{param.value}}
+					</span>
+				</ion-item>
+			</ion-list>
+
+		</div>
+	</ion-content>
+</ion-view>

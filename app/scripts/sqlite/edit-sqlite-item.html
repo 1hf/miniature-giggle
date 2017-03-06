@@ -1,0 +1,17 @@
+<ion-modal-view>
+	<ion-header-bar class="bar bar-header bar-positive">
+		<h1 class="title">Item</h1>
+		<button class="button button-clear button-primary" ng-click="cancel()">Cancel</button>
+	</ion-header-bar>
+	<ion-content class="padding">
+		<div class="list">
+			<label class="item item-input">
+				<input type="text" placeholder="Title" ng-model="data.title">
+			</label>
+			<label class="item item-input">
+				<textarea placeholder="Teaser" rows="6" ng-model="data.teaser"></textarea>
+			</label>
+			<button class="button button-full button-positive" ng-click="save()">Save</button>
+		</div>
+	</ion-content>
+</ion-modal-view>

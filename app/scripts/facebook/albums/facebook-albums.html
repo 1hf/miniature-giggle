@@ -1,0 +1,13 @@
+<ion-view view-title="Albums">
+	<ion-content>
+		<div class="card" ng-repeat="album in vm.albums" ng-click="vm.showAlbum(album.id)">
+			<div class="item">
+				<h2>{{album.name}}</h2>
+			</div>
+
+			<div class="item item-image image-container-crop-300">
+				<img ng-src="{{album.cover}}">
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

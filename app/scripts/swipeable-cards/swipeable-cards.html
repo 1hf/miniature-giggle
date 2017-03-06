@@ -1,0 +1,20 @@
+<ion-view view-title="Swipeable cards">
+	<ion-nav-buttons side="right">
+		<button class="button button-clear icon ion-refresh" ng-click="vm.refresh()"></button>
+	</ion-nav-buttons>
+	<ion-pane>
+		<swipe-cards ng-if="vm.items.length > 0">
+			<swipe-card ng-repeat="item in vm.items" on-destroy="vm.cardDestroyed($index)" on-card-swipe="vm.cardSwiped($index)">
+				<div class="title">
+					<p>{{item.title}}</p>
+				</div>
+				<div class="image">
+					<img ng-src="{{item.image}}">
+				</div>
+			</swipe-card>
+		</swipe-cards>
+		<h3 ng-if="vm.items.length === 0" class="text-center" style="margin-top: 100px;">
+			There are no items to display
+		</h3>
+	</ion-pane>
+</ion-view>

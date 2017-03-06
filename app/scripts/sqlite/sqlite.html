@@ -1,0 +1,24 @@
+<ion-view view-title="SQLite">
+
+	<ion-nav-buttons side="right">
+		<button class="button button-clear icon ion-plus" ng-click="vm.addItem()"></button>
+	</ion-nav-buttons>
+
+	<ion-content has-header="true">
+
+		<ion-list can-swipe="true" ng-if="vm.items.length > 0">
+			<ion-item ng-repeat="item in vm.items" class="item-text-wrap">
+				<h2>{{item.title}}</h2>
+				<p>{{item.teaser}}</p>
+
+				<ion-option-button class="button-assertive" ng-click="vm.deleteItem(item.id)">
+					Delete
+				</ion-option-button>
+
+				<ion-option-button class="button-positive" ng-click="vm.updateItem(item)">
+					Edit
+				</ion-option-button>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

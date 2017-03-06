@@ -1,0 +1,31 @@
+<ion-view view-title="Instagram">
+	<ion-content>
+
+		<div class="padding" ng-if="!vm.accessToken">
+			<p>Login with your <strong>Instagram account</strong>.</p>
+			<p>The application will pull from <strong>Instagram</strong> and will display your <strong>recent posts</strong>.</p>
+		</div>
+
+		<div class="card" ng-if="!!vm.isAuthorized">
+			<div class="item item-divider">
+				Access Token
+			</div>
+			<div class="item item-text-wrap">
+				{{vm.accessToken || 'Not authorized'}}
+			</div>
+		</div>
+
+		<div class="padding">
+			<button ng-if="!vm.isAuthorized" class="button button-block button-positive" ng-click="vm.login()">
+				Login
+			</button>
+			<button ng-if="!!vm.isAuthorized" class="button button-block button-stable" ng-click="vm.showRecentMedia()">
+				Show Recent posts/media
+			</button>
+			<button ng-if="!!vm.isAuthorized" class="button button-block button-assertive" ng-click="vm.logout()">
+				Logout
+			</button>
+		</div>
+
+	</ion-content>
+</ion-view>

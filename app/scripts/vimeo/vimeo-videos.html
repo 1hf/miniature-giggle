@@ -1,0 +1,24 @@
+<ion-view view-title="Vimeo">
+	<ion-content>
+		<ion-refresher
+			pulling-text="Pull to refresh..."
+			on-refresh="vm.refresh()">
+		</ion-refresher>
+
+		<div ng-repeat="video in vm.videos">
+			<div class="card" ng-click="vm.navigate(video)">
+				<div class="item item-text-wrap item-thumbnail-left">
+					<img ng-src="{{video.thumb}}">
+					<h2>{{video.title}}</h2>
+					<p>{{video.description | limitTo: 80 }}{{video.description.length > 80 ? '...' : ''}}</p>
+				</div>
+			</div>
+		</div>
+
+		<ion-infinite-scroll
+			on-infinite="vm.loadMore()"
+			ng-if="vm.moreItemsAvailable"
+			distance="1%">
+		</ion-infinite-scroll>
+	</ion-content>
+</ion-view>

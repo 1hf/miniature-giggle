@@ -1,0 +1,50 @@
+<ion-view view-title="Make a Donation">
+	<ion-content class="ion-list">
+		<form name="paymentForm" class="padding">
+			<label class="item item-input item-stacked-label padding">
+				Card Type:
+				<select ng-model="vm.card.cardType" ng-options="type for type in vm.types" name="cardType"></select>
+			</label>
+
+			<label class="item item-input item-stacked-label padding">
+				Holder
+				<input type="text" class="stripe-field" ng-model="vm.card.holder" name="cardHolder" placeholder="John Smith" required />
+			</label>
+			<label class="item item-input item-stacked-label padding">
+				Donation Amount
+				<input type="text" class="stripe-field" ng-model="vm.card.amount" name="cardAmount" placeholder="eg: 10" />
+			</label>
+
+			<label class="item item-input item-stacked-label padding">
+				Card Number
+				<input type="text" class="stripe-field" ng-model="vm.card.number" name="cardNumber" placeholder="4111111111111111" cc-number cc-type="vm.card.cardType" />
+				<small class="assertive"
+					  ng-if="paymentForm.cardNumber.$invalid && paymentForm.cardNumber.$touched">Invalid</small>
+			</label>
+			<label class="item item-input item-stacked-label padding">
+				Card CVC
+				<input type="text" class="stripe-field" ng-model="vm.card.cvc" cc-type="cardNumber.$ccType" name="cardCvc" placeholder="123" required />
+			</label>
+
+
+			<div class="item item-input item-stacked-label padding">
+				Expiration (MM/YY)
+
+				<div cc-exp>
+					<input ng-model="vm.card.exp_month" name="cardExpMonth" cc-exp-month placeholder="MM" style="width: 40px; text-align:center;"></input> /
+					<input ng-model="vm.card.exp_year" name="cardExpYear"  cc-exp-year placeholder="YY" style="width: 40px; text-align:center;" maxlength="4"></input>
+				</div>
+				<small class="assertive"
+						ng-if="(paymentForm.cardExpMonth.$invalid) || (paymentForm.cardExpYear.$invalid)">Invalid</small>
+			</div>
+
+
+			<div class="padding">
+				<button type="button"
+						ng-disabled="paymentForm.$invalid"
+						class="button button-block button-positive"
+						ng-click="vm.makeStripePayment(vm.card)">Donate</button>
+			</div>
+		</form>
+	</ion-content>
+</ion-view>

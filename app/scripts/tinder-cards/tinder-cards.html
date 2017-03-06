@@ -1,0 +1,20 @@
+<ion-view view-title="Tinder cards">
+	<ion-nav-buttons side="right">
+		<button class="button button-clear icon ion-refresh" ng-click="vm.refresh()"></button>
+	</ion-nav-buttons>
+	<ion-pane>
+		<td-cards>
+			<td-card ng-repeat="item in vm.items" ng-if="vm.items.length > 0"
+				on-destroy="vm.cardDestroyed($index)">
+				<div class="image">
+					<div class="no-text">NOPE</div>
+					<img ng-src="{{item.image}}">
+					<div class="yes-text">LIKE</div>
+				</div>
+			</td-card>
+		</td-cards>
+		<h3 ng-if="vm.items.length === 0" class="text-center" style="margin-top: 100px;">
+			There are no items to display
+		</h3>
+	</ion-pane>
+</ion-view>

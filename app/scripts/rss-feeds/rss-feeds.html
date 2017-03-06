@@ -1,0 +1,9 @@
+<ion-view view-title="RSS Feeds">
+	<ion-content>
+		<ion-list>
+			<ion-item ng-repeat="feed in vm.rssFeeds" href="#/app/rssfeeds/{{feed.id}}">
+				{{feed.title}}
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

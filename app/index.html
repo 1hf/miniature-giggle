@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title></title>
+
+		<!-- build:css styles/vendor.css -->
+		<!-- bower:css -->
+		<link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
+		<link rel="stylesheet" href="bower_components/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.css" />
+		<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="bower_components/ionic-ion-tinder-cards/ionic.tdcards.css" />
+		<!-- endbower -->
+		<!-- endbuild -->
+
+		<link href="styles/main.css" rel="stylesheet">
+		<!-- build:css styles/main.css -->
+		<link href="styles/main.css" rel="stylesheet">
+		<!-- endbuild -->
+
+		<!-- ionic/angularjs js -->
+		<!-- build:js scripts/vendor.js -->
+		<!-- bower:js -->
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="bower_components/ionic/release/js/ionic.js"></script>
+		<script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+		<script src="bower_components/angular-websocket/angular-websocket.min.js"></script>
+		<script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+		<script src="bower_components/lodash/lodash.js"></script>
+		<script src="bower_components/angular-base64/angular-base64.js"></script>
+		<script src="bower_components/moment/moment.js"></script>
+		<script src="bower_components/angular-moment/angular-moment.js"></script>
+		<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+		<script src="bower_components/angular-google-chart/ng-google-chart.js"></script>
+		<script src="bower_components/firebase/firebase.js"></script>
+		<script src="bower_components/angularfire/dist/angularfire.js"></script>
+		<script src="bower_components/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js"></script>
+		<script src="bower_components/ng-cordova-oauth/dist/ng-cordova-oauth.js"></script>
+		<script src="bower_components/jsSHA/src/sha.js"></script>
+		<script src="bower_components/ng-twitter-api/dist/ng-twitter-api.js"></script>
+		<script src="bower_components/ionic-ion-swipe-cards/ionic.swipecards.js"></script>
+		<script src="bower_components/collide/collide.js"></script>
+		<script src="bower_components/ionic-ion-tinder-cards/ionic.tdcards.js"></script>
+		<script src="bower_components/angular-credit-cards/release/angular-credit-cards.js"></script>
+		<!-- endbower -->
+		<!-- endbuild -->
+
+		<!-- cordova script (this will be a 404 during development) -->
+		<script src="cordova.js"></script>
+		<script src="lib/ionic.cloud.min.js"></script>
+
+		<!-- your app's js -->
+		<!-- build:js scripts/scripts.js -->
+		<!-- include: "type": "js", "files": ["scripts/**/*.module.js", "scripts/app.js", "scripts/**/*.js"] -->
+		<script src="scripts/ad/ad.module.js"></script>
+		<script src="scripts/charts/charts.module.js"></script>
+		<script src="scripts/chats/chats.module.js"></script>
+		<script src="scripts/common/common.module.js"></script>
+		<script src="scripts/components/apprate/apprate.module.js"></script>
+		<script src="scripts/drupal/drupal.module.js"></script>
+		<script src="scripts/elements/elements.module.js"></script>
+		<script src="scripts/events/events.module.js"></script>
+		<script src="scripts/facebook/facebook.module.js"></script>
+		<script src="scripts/feedback/feedback.module.js"></script>
+		<script src="scripts/galleries/galleries.module.js"></script>
+		<script src="scripts/home/home.module.js"></script>
+		<script src="scripts/infrastructure/infrastructure.module.js"></script>
+		<script src="scripts/instagram/instagram.module.js"></script>
+		<script src="scripts/lo-storage/lo-storage.module.js"></script>
+		<script src="scripts/map/map.module.js"></script>
+		<script src="scripts/menu/menu.module.js"></script>
+		<script src="scripts/news/news.module.js"></script>
+		<script src="scripts/oauth/oauth.module.js"></script>
+		<script src="scripts/popover-menu/popover-menu.module.js"></script>
+		<script src="scripts/position/position.module.js"></script>
+		<script src="scripts/products-extended/products-extended.module.js"></script>
+		<script src="scripts/products/products.module.js"></script>
+		<script src="scripts/push/push.module.js"></script>
+		<script src="scripts/restaurant-catalogue/cart/restaurant-cart.module.js"></script>
+		<script src="scripts/restaurant-catalogue/catalogue/restaurant-catalogue.module.js"></script>
+		<script src="scripts/restaurant-catalogue/restaurant-delivery/restaurant-delivery.module.js"></script>
+		<script src="scripts/restaurant-catalogue/restaurant.module.js"></script>
+		<script src="scripts/rss-feeds/rss-feeds.module.js"></script>
+		<script src="scripts/shopping-cart/shopping-cart.module.js"></script>
+		<script src="scripts/sqlite/sqlite.module.js"></script>
+		<script src="scripts/stream/stream.module.js"></script>
+		<script src="scripts/stripe/stripe.module.js"></script>
+		<script src="scripts/swipeable-cards/swipeable-cards.module.js"></script>
+		<script src="scripts/tinder-cards/tinder-cards.module.js"></script>
+		<script src="scripts/vimeo/vimeo.module.js"></script>
+		<script src="scripts/wordpress/wordpress.module.js"></script>
+		<script src="scripts/youtube/youtube.module.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/ad/ad.controller.js"></script>
+		<script src="scripts/ad/ad.service.js"></script>
+		<script src="scripts/charts/charts.controller.js"></script>
+		<script src="scripts/chats/auth/chats-login.controller.js"></script>
+		<script src="scripts/chats/room/chat-room.controller.js"></script>
+		<script src="scripts/chats/rooms/chat-rooms.controller.js"></script>
+		<script src="scripts/chats/services/chat-messages.service.js"></script>
+		<script src="scripts/chats/services/chat-rooms.service.js"></script>
+		<script src="scripts/chats/services/chats-auth.service.js"></script>
+		<script src="scripts/common/directives/gmaps/gmaps.directive.js"></script>
+		<script src="scripts/common/services/extenal-apps.service.js"></script>
+		<script src="scripts/common/services/html-to-plain-text.service.js"></script>
+		<script src="scripts/config/internet-connectivity.js"></script>
+		<script src="scripts/config/spinner.js"></script>
+		<script src="scripts/configuration.js"></script>
+		<script src="scripts/drupal/drupal-article.controller.js"></script>
+		<script src="scripts/drupal/drupal-articles.controller.js"></script>
+		<script src="scripts/drupal/drupal.service.js"></script>
+		<script src="scripts/elements/elements.controller.js"></script>
+		<script src="scripts/events/events.controller.js"></script>
+		<script src="scripts/events/events.service.js"></script>
+		<script src="scripts/facebook/album/facebook-album.controller.js"></script>
+		<script src="scripts/facebook/albums/facebook-albums.controller.js"></script>
+		<script src="scripts/facebook/facebook-auth.service.js"></script>
+		<script src="scripts/facebook/facebook.service.js"></script>
+		<script src="scripts/facebook/login/facebook-login.controller.js"></script>
+		<script src="scripts/feedback/camera.service.js"></script>
+		<script src="scripts/feedback/feedback.controller.js"></script>
+		<script src="scripts/feedback/feedback.service.js"></script>
+		<script src="scripts/galleries/galleries.controller.js"></script>
+		<script src="scripts/galleries/galleries.service.js"></script>
+		<script src="scripts/galleries/gallery-preview.controller.js"></script>
+		<script src="scripts/galleries/gallery.controller.js"></script>
+		<script src="scripts/home/home-data.service.js"></script>
+		<script src="scripts/home/home.controller.js"></script>
+		<script src="scripts/home/menu-items.service.js"></script>
+		<script src="scripts/infrastructure/services/firebase-db.service.js"></script>
+		<script src="scripts/instagram/instagram.service.js"></script>
+		<script src="scripts/instagram/login/instagram-login.controller.js"></script>
+		<script src="scripts/instagram/recent-media/instagram-recent-media.controller.js"></script>
+		<script src="scripts/lo-storage/edit-lo-storage-item.service.js"></script>
+		<script src="scripts/lo-storage/lo-storage.controller.js"></script>
+		<script src="scripts/lo-storage/lo-storage.service.js"></script>
+		<script src="scripts/map/map.controller.js"></script>
+		<script src="scripts/map/map.service.js"></script>
+		<script src="scripts/menu/menu.controller.js"></script>
+		<script src="scripts/news/article.controller.js"></script>
+		<script src="scripts/news/articles.controller.js"></script>
+		<script src="scripts/news/news.service.js"></script>
+		<script src="scripts/oauth/login/oauth.controller.js"></script>
+		<script src="scripts/oauth/oauth-providers/oauth-facebook.service.js"></script>
+		<script src="scripts/oauth/oauth-providers/oauth-google.service.js"></script>
+		<script src="scripts/oauth/oauth-providers/oauth-twitter.service.js"></script>
+		<script src="scripts/oauth/oauth.service.js"></script>
+		<script src="scripts/oauth/profile/oauth-profile.controller.js"></script>
+		<script src="scripts/popover-menu/popover-menu.controller.js"></script>
+		<script src="scripts/popover-menu/popover-view.service.js"></script>
+		<script src="scripts/position/position.controller.js"></script>
+		<script src="scripts/position/position.service.js"></script>
+		<script src="scripts/products-extended/product-extended.controller.js"></script>
+		<script src="scripts/products-extended/products-extended.controller.js"></script>
+		<script src="scripts/products-extended/products-extended.service.js"></script>
+		<script src="scripts/products/product.controller.js"></script>
+		<script src="scripts/products/products.controller.js"></script>
+		<script src="scripts/products/products.service.js"></script>
+		<script src="scripts/push/push-sender.service.js"></script>
+		<script src="scripts/push/push-token.service.js"></script>
+		<script src="scripts/push/push.controller.js"></script>
+		<script src="scripts/restaurant-catalogue/cart/restaurant-cart.service.js"></script>
+		<script src="scripts/restaurant-catalogue/cart/restaurant-cart/restaurant-cart.controller.js"></script>
+		<script src="scripts/restaurant-catalogue/catalogue/restaurant-catalogue-item.controller.js"></script>
+		<script src="scripts/restaurant-catalogue/catalogue/restaurant-catalogue.controller.js"></script>
+		<script src="scripts/restaurant-catalogue/catalogue/restaurant-catalogue.service.js"></script>
+		<script src="scripts/restaurant-catalogue/restaurant-delivery/delivery-selector/delivery-method-selector.controller.js"></script>
+		<script src="scripts/restaurant-catalogue/restaurant-delivery/home-delivery/home-delivery.controller.js"></script>
+		<script src="scripts/restaurant-catalogue/restaurant-delivery/restaurant-info.service.js"></script>
+		<script src="scripts/restaurant-catalogue/restaurant-delivery/restaurant-order-processor.js"></script>
+		<script src="scripts/restaurant-catalogue/restaurant-delivery/take-away/take-away.controller.js"></script>
+		<script src="scripts/rss-feeds/rss-article.controller.js"></script>
+		<script src="scripts/rss-feeds/rss-date.filter.js"></script>
+		<script src="scripts/rss-feeds/rss-feed.controller.js"></script>
+		<script src="scripts/rss-feeds/rss-feeds.controller.js"></script>
+		<script src="scripts/rss-feeds/rss-feeds.service.js"></script>
+		<script src="scripts/shopping-cart/my-cart/my-cart.controller.js"></script>
+		<script src="scripts/shopping-cart/order-processor.js"></script>
+		<script src="scripts/shopping-cart/shopping-cart.service.js"></script>
+		<script src="scripts/sqlite/edit-sqlite-item.service.js"></script>
+		<script src="scripts/sqlite/sqlite.controller.js"></script>
+		<script src="scripts/sqlite/sqlite.service.js"></script>
+		<script src="scripts/stream/stream.controller.js"></script>
+		<script src="scripts/stream/stream.service.js"></script>
+		<script src="scripts/stripe/stripe.controller.js"></script>
+		<script src="scripts/stripe/stripe.service.js"></script>
+		<script src="scripts/swipeable-cards/swipeable-cards.controller.js"></script>
+		<script src="scripts/swipeable-cards/swipeable-cards.service.js"></script>
+		<script src="scripts/tinder-cards/tinder-cards.controller.js"></script>
+		<script src="scripts/tinder-cards/tinder-cards.service.js"></script>
+		<script src="scripts/vimeo/vimeo-auth.interceptor.js"></script>
+		<script src="scripts/vimeo/vimeo-embed-url.filter.js"></script>
+		<script src="scripts/vimeo/vimeo-video.controller.js"></script>
+		<script src="scripts/vimeo/vimeo-videos.controller.js"></script>
+		<script src="scripts/vimeo/vimeo.service.js"></script>
+		<script src="scripts/wordpress/wordpress-article.controller.js"></script>
+		<script src="scripts/wordpress/wordpress-articles.controller.js"></script>
+		<script src="scripts/wordpress/wordpress.service.js"></script>
+		<script src="scripts/youtube/video.controller.js"></script>
+		<script src="scripts/youtube/videos.controller.js"></script>
+		<script src="scripts/youtube/youtube-embed-url.filter.js"></script>
+		<script src="scripts/youtube/youtube.service.js"></script>
+		<!-- /include -->
+		<!-- endbuild -->
+	</head>
+
+	<body ng-app="starter">
+		<ion-nav-view></ion-nav-view>
+	</body>
+</html>

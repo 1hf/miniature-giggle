@@ -1,0 +1,17 @@
+<ion-view view-title="RSS">
+	<ion-content>
+		<div ng-repeat="entry in vm.entries">
+			<div class="card">
+				<div class="item item-text-wrap">
+					<h2>{{entry.title}}</h2>
+					<p class="postby"><span>{{entry.publishedDate | rssDate}}</span> - <span>{{entry.author}}</span></p>
+					<p ng-bind-html="entry.contentSnippet"></p>
+				</div>
+				<a class="item item-icon-left" href="#/app/rssfeeds/{{vm.rssFeedId}}/{{entry.hash}}">
+					<i class="icon ion-arrow-right-c"></i>
+					Read more
+				</a>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

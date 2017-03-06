@@ -1,0 +1,27 @@
+<ion-view view-title="OAuth profile" cache-view="false">
+	<ion-content>
+		<div class="list">
+			<div class="item">
+				<h2>OAuth provider</h2>
+				<p>{{vm.oauthProvider}}</p>
+			</div>
+			<div class="item">
+				<h2>First name</h2>
+				<p>{{vm.data.firstName}}</p>
+			</div>
+			<div class="item">
+				<h2>Last name</h2>
+				<p>{{vm.data.lastName}}</p>
+			</div>
+			<div class="item">
+				<h2>Email</h2>
+				<p>{{vm.data.email}}</p>
+			</div>
+			<div class="item">
+				<button class="button button-block button-positive" ng-click="vm.logout()">
+					Log out
+				</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

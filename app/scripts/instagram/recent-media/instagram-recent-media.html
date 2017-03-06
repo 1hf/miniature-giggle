@@ -1,0 +1,31 @@
+<ion-view view-title="Recent media">
+	<ion-content>
+		<ion-refresher
+			pulling-text="Pull to refresh..."
+			on-refresh="vm.doRefresh()">
+		</ion-refresher>
+		<div class="card" ng-repeat="media in vm.mediaList">
+			<div class="item item-avatar">
+				<img ng-src="{{media.user.profile_picture}}">
+				<h3>{{media.user.full_name || media.user.username}}</h3>
+				<p>{{media.location.name}}</p>
+				<p class="instagram-created-time" am-time-ago="media.created_time" am-preprocess="unix"></p>
+			</div>
+
+			<div class="item item-image">
+				<img ng-src="{{media.images.standard_resolution.url}}">
+			</div>
+
+			<div class="item item-text-wrap" style="padding-top:10px;">
+				<p>
+					<span>
+						<i class="icon ion-thumbsup"></i>
+						{{media.likes.count}} {{media.likes.count == 1 ? 'like' : 'likes'}}
+					</span>
+				</p>
+				<p>{{media.caption.text}}</p>
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>

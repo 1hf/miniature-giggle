@@ -1,0 +1,11 @@
+<ion-view view-title="Video">
+	<ion-content>
+		<div class="video-container">
+			<iframe ng-src="{{ vm.video.videoId | youtubeEmbedUrl }}" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="content-inner">
+			<h1>{{vm.video.title}}</h1>
+			<p>{{vm.video.description}}</p>
+		</div>
+	</ion-content>
+</ion-view>
